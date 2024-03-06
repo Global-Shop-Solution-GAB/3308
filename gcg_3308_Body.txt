@@ -1,0 +1,3 @@
+Workcenter notification*!*This email is to inform you that employee %EMP% - %EMPNAME% has clocked onto workcenter %WC% - %WCNAME% at %DATETIME%. 
+
+%JOB%-%SUFFIX%-%SEQ%
