@@ -1,0 +1,582 @@
+Program.Sub.ScreenSU.Start
+
+Gui.SS_Form1..Create
+Gui.SS_Form1..Caption("Email Notification Maintenance")
+Gui.SS_Form1..Size(12135,5700)
+Gui.SS_Form1..Position(0,0)
+Gui.SS_Form1..AlwaysOnTop(False)
+Gui.SS_Form1..FontName("Arial")
+Gui.SS_Form1..FontSize(8)
+Gui.SS_Form1..ForeColor(0)
+Gui.SS_Form1..Backcolor(-2147483633)
+Gui.SS_Form1..ControlBox(True)
+Gui.SS_Form1..MaxButton(False)
+Gui.SS_Form1..MinButton(False)
+Gui.SS_Form1..MousePointer(0)
+Gui.SS_Form1..Moveable(True)
+Gui.SS_Form1..Sizeable(False)
+Gui.SS_Form1..ShowInTaskBar(True)
+Gui.SS_Form1..TitleBar(True)
+
+Gui.SS_Form1..Event(unload,Unload)
+
+Gui.SS_Form1.lbl_txtWC.Create(label)
+Gui.SS_Form1.lbl_txtWC.Caption("Workcenter")
+Gui.SS_Form1.lbl_txtWC.Visible(True)
+Gui.SS_Form1.lbl_txtWC.Size(1800,200)
+Gui.SS_Form1.lbl_txtWC.Zorder(1)
+Gui.SS_Form1.lbl_txtWC.Position(100,135)
+Gui.SS_Form1.lbl_txtWC.Enabled(True)
+Gui.SS_Form1.lbl_txtWC.Alignment(0)
+Gui.SS_Form1.lbl_txtWC.FontName("Arial")
+Gui.SS_Form1.lbl_txtWC.FontSize(8)
+Gui.SS_Form1.lbl_txtWC.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_txtWC.BackStyle(0)
+Gui.SS_Form1.lbl_txtWC.Tooltip("")
+Gui.SS_Form1.lbl_txtWC.ControlGroup(0)
+
+
+Gui.SS_Form1.txtWC.Create(textbox)
+Gui.SS_Form1.txtWC.Text("")
+Gui.SS_Form1.txtWC.Visible(True)
+Gui.SS_Form1.txtWC.Size(1800,330)
+Gui.SS_Form1.txtWC.Zorder(0)
+Gui.SS_Form1.txtWC.Position(100,335)
+Gui.SS_Form1.txtWC.Enabled(True)
+Gui.SS_Form1.txtWC.Alignment(0)
+Gui.SS_Form1.txtWC.FontName("Arial")
+Gui.SS_Form1.txtWC.FontSize(8)
+Gui.SS_Form1.txtWC.Backcolor(16777215)
+Gui.SS_Form1.txtWC.BorderStyle(1)
+Gui.SS_Form1.txtWC.TabStop(True)
+Gui.SS_Form1.txtWC.TabIndex(1)
+Gui.SS_Form1.txtWC.Tooltip("")
+Gui.SS_Form1.txtWC.ControlGroup(0)
+Gui.SS_Form1.txtWC.DefaultValue("")
+
+
+Gui.SS_Form1.cmd_txtWC.Create(button)
+Gui.SS_Form1.cmd_txtWC.Caption("^")
+Gui.SS_Form1.cmd_txtWC.Visible(True)
+Gui.SS_Form1.cmd_txtWC.Size(330,330)
+Gui.SS_Form1.cmd_txtWC.Zorder(0)
+Gui.SS_Form1.cmd_txtWC.Position(1985,335)
+Gui.SS_Form1.cmd_txtWC.Enabled(True)
+Gui.SS_Form1.cmd_txtWC.FontName("Arial")
+Gui.SS_Form1.cmd_txtWC.FontSize(8)
+Gui.SS_Form1.cmd_txtWC.TabStop(True)
+Gui.SS_Form1.cmd_txtWC.TabIndex(2)
+Gui.SS_Form1.cmd_txtWC.Tooltip("")
+Gui.SS_Form1.cmd_txtWC.ControlGroup(0)
+Gui.SS_Form1.cmd_txtWC.DefaultValue("")
+
+Gui.SS_Form1.cmd_txtWC.Event(click,cmd_txtwc_click)
+
+Gui.SS_Form1.lbl_txtEmployee.Create(label)
+Gui.SS_Form1.lbl_txtEmployee.Caption("Employee Name")
+Gui.SS_Form1.lbl_txtEmployee.Visible(True)
+Gui.SS_Form1.lbl_txtEmployee.Size(1800,200)
+Gui.SS_Form1.lbl_txtEmployee.Zorder(1)
+Gui.SS_Form1.lbl_txtEmployee.Position(2455,135)
+Gui.SS_Form1.lbl_txtEmployee.Enabled(True)
+Gui.SS_Form1.lbl_txtEmployee.Alignment(0)
+Gui.SS_Form1.lbl_txtEmployee.FontName("Arial")
+Gui.SS_Form1.lbl_txtEmployee.FontSize(8)
+Gui.SS_Form1.lbl_txtEmployee.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_txtEmployee.BackStyle(0)
+Gui.SS_Form1.lbl_txtEmployee.Tooltip("")
+Gui.SS_Form1.lbl_txtEmployee.ControlGroup(0)
+
+
+Gui.SS_Form1.txtEmployee.Create(textbox)
+Gui.SS_Form1.txtEmployee.Text("")
+Gui.SS_Form1.txtEmployee.Visible(False)
+Gui.SS_Form1.txtEmployee.Size(3585,330)
+Gui.SS_Form1.txtEmployee.Zorder(0)
+Gui.SS_Form1.txtEmployee.Position(3800,4700)
+Gui.SS_Form1.txtEmployee.Enabled(False)
+Gui.SS_Form1.txtEmployee.Alignment(0)
+Gui.SS_Form1.txtEmployee.FontName("Arial")
+Gui.SS_Form1.txtEmployee.FontSize(8)
+Gui.SS_Form1.txtEmployee.Backcolor(255)
+Gui.SS_Form1.txtEmployee.BorderStyle(1)
+Gui.SS_Form1.txtEmployee.TabStop(True)
+Gui.SS_Form1.txtEmployee.TabIndex(4)
+Gui.SS_Form1.txtEmployee.Tooltip("")
+Gui.SS_Form1.txtEmployee.ControlGroup(0)
+Gui.SS_Form1.txtEmployee.DefaultValue("")
+
+
+Gui.SS_Form1.cmd_txtEmployee.Create(button)
+Gui.SS_Form1.cmd_txtEmployee.Caption("^")
+Gui.SS_Form1.cmd_txtEmployee.Visible(True)
+Gui.SS_Form1.cmd_txtEmployee.Size(330,330)
+Gui.SS_Form1.cmd_txtEmployee.Zorder(0)
+Gui.SS_Form1.cmd_txtEmployee.Position(6125,335)
+Gui.SS_Form1.cmd_txtEmployee.Enabled(True)
+Gui.SS_Form1.cmd_txtEmployee.FontName("Arial")
+Gui.SS_Form1.cmd_txtEmployee.FontSize(8)
+Gui.SS_Form1.cmd_txtEmployee.TabStop(True)
+Gui.SS_Form1.cmd_txtEmployee.TabIndex(5)
+Gui.SS_Form1.cmd_txtEmployee.Tooltip("")
+Gui.SS_Form1.cmd_txtEmployee.ControlGroup(0)
+Gui.SS_Form1.cmd_txtEmployee.DefaultValue("")
+
+Gui.SS_Form1.cmd_txtEmployee.Event(click,cmd_txtemployee_click)
+
+Gui.SS_Form1.lbl_txtEmail.Create(label)
+Gui.SS_Form1.lbl_txtEmail.Caption("Email")
+Gui.SS_Form1.lbl_txtEmail.Visible(True)
+Gui.SS_Form1.lbl_txtEmail.Size(1800,200)
+Gui.SS_Form1.lbl_txtEmail.Zorder(1)
+Gui.SS_Form1.lbl_txtEmail.Position(6625,135)
+Gui.SS_Form1.lbl_txtEmail.Enabled(True)
+Gui.SS_Form1.lbl_txtEmail.Alignment(0)
+Gui.SS_Form1.lbl_txtEmail.FontName("Arial")
+Gui.SS_Form1.lbl_txtEmail.FontSize(8)
+Gui.SS_Form1.lbl_txtEmail.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_txtEmail.BackStyle(0)
+Gui.SS_Form1.lbl_txtEmail.Tooltip("")
+Gui.SS_Form1.lbl_txtEmail.ControlGroup(0)
+
+
+Gui.SS_Form1.txtEmail.Create(textbox)
+Gui.SS_Form1.txtEmail.Text("")
+Gui.SS_Form1.txtEmail.Visible(True)
+Gui.SS_Form1.txtEmail.Size(2700,330)
+Gui.SS_Form1.txtEmail.Zorder(0)
+Gui.SS_Form1.txtEmail.Position(6610,335)
+Gui.SS_Form1.txtEmail.Enabled(True)
+Gui.SS_Form1.txtEmail.Alignment(0)
+Gui.SS_Form1.txtEmail.FontName("Arial")
+Gui.SS_Form1.txtEmail.FontSize(8)
+Gui.SS_Form1.txtEmail.Backcolor(16777215)
+Gui.SS_Form1.txtEmail.BorderStyle(1)
+Gui.SS_Form1.txtEmail.TabStop(True)
+Gui.SS_Form1.txtEmail.TabIndex(7)
+Gui.SS_Form1.txtEmail.Tooltip("")
+Gui.SS_Form1.txtEmail.ControlGroup(0)
+Gui.SS_Form1.txtEmail.DefaultValue("")
+
+
+Gui.SS_Form1.chkActive.Create(checkbox)
+Gui.SS_Form1.chkActive.Alignment(0)
+Gui.SS_Form1.chkActive.Caption("Active")
+Gui.SS_Form1.chkActive.Visible(True)
+Gui.SS_Form1.chkActive.Size(1080,300)
+Gui.SS_Form1.chkActive.Zorder(0)
+Gui.SS_Form1.chkActive.Position(9485,360)
+Gui.SS_Form1.chkActive.Enabled(True)
+Gui.SS_Form1.chkActive.FontName("Arial")
+Gui.SS_Form1.chkActive.FontSize(8)
+Gui.SS_Form1.chkActive.TabStop(True)
+Gui.SS_Form1.chkActive.TabIndex(8)
+Gui.SS_Form1.chkActive.Tooltip("")
+Gui.SS_Form1.chkActive.ControlGroup(0)
+Gui.SS_Form1.chkActive.DefaultValue("")
+
+
+Gui.SS_Form1.cmdAdd.Create(button)
+Gui.SS_Form1.cmdAdd.Caption("Add")
+Gui.SS_Form1.cmdAdd.Visible(True)
+Gui.SS_Form1.cmdAdd.Size(1000,360)
+Gui.SS_Form1.cmdAdd.Zorder(0)
+Gui.SS_Form1.cmdAdd.Position(10680,305)
+Gui.SS_Form1.cmdAdd.Enabled(True)
+Gui.SS_Form1.cmdAdd.FontName("Arial")
+Gui.SS_Form1.cmdAdd.FontSize(8)
+Gui.SS_Form1.cmdAdd.TabStop(True)
+Gui.SS_Form1.cmdAdd.TabIndex(9)
+Gui.SS_Form1.cmdAdd.Tooltip("")
+Gui.SS_Form1.cmdAdd.ControlGroup(0)
+Gui.SS_Form1.cmdAdd.DefaultValue("")
+
+Gui.SS_Form1.cmdAdd.Event(click,cmdadd_click)
+
+Gui.SS_Form1.gsflexgrid1.Create(gsflexgrid)
+Gui.SS_Form1.gsflexgrid1.Visible(True)
+Gui.SS_Form1.gsflexgrid1.Size(11655,3720)
+Gui.SS_Form1.gsflexgrid1.Zorder(0)
+Gui.SS_Form1.gsflexgrid1.Position(100,810)
+Gui.SS_Form1.gsflexgrid1.Enabled(True)
+Gui.SS_Form1.gsflexgrid1.FixedRows(0)
+Gui.SS_Form1.gsflexgrid1.FixedCols(0)
+
+Gui.SS_Form1.gsflexgrid1.Event(commandclick,gsflexgrid1_commandclick)
+
+Gui.SS_Form1.txtWCName.Create(textbox)
+Gui.SS_Form1.txtWCName.Text("")
+Gui.SS_Form1.txtWCName.Visible(False)
+Gui.SS_Form1.txtWCName.Size(1605,300)
+Gui.SS_Form1.txtWCName.Zorder(0)
+Gui.SS_Form1.txtWCName.Position(3800,5100)
+Gui.SS_Form1.txtWCName.Enabled(False)
+Gui.SS_Form1.txtWCName.Alignment(0)
+Gui.SS_Form1.txtWCName.FontName("Arial")
+Gui.SS_Form1.txtWCName.FontSize(8)
+Gui.SS_Form1.txtWCName.Backcolor(255)
+Gui.SS_Form1.txtWCName.BorderStyle(1)
+Gui.SS_Form1.txtWCName.TabStop(True)
+Gui.SS_Form1.txtWCName.TabIndex(11)
+Gui.SS_Form1.txtWCName.Tooltip("")
+Gui.SS_Form1.txtWCName.ControlGroup(0)
+Gui.SS_Form1.txtWCName.DefaultValue("")
+
+
+Gui.SS_Form1.txtEmployeeName.Create(textbox)
+Gui.SS_Form1.txtEmployeeName.Text("")
+Gui.SS_Form1.txtEmployeeName.Visible(True)
+Gui.SS_Form1.txtEmployeeName.Size(3570,300)
+Gui.SS_Form1.txtEmployeeName.Zorder(0)
+Gui.SS_Form1.txtEmployeeName.Position(2460,345)
+Gui.SS_Form1.txtEmployeeName.Enabled(True)
+Gui.SS_Form1.txtEmployeeName.Alignment(0)
+Gui.SS_Form1.txtEmployeeName.FontName("Arial")
+Gui.SS_Form1.txtEmployeeName.FontSize(8)
+Gui.SS_Form1.txtEmployeeName.Backcolor(16777215)
+Gui.SS_Form1.txtEmployeeName.BorderStyle(1)
+Gui.SS_Form1.txtEmployeeName.TabStop(True)
+Gui.SS_Form1.txtEmployeeName.TabIndex(12)
+Gui.SS_Form1.txtEmployeeName.Tooltip("")
+Gui.SS_Form1.txtEmployeeName.ControlGroup(0)
+Gui.SS_Form1.txtEmployeeName.DefaultValue("")
+
+
+Gui.SS_Form1.cmdUpdate.Create(button)
+Gui.SS_Form1.cmdUpdate.Caption("Update")
+Gui.SS_Form1.cmdUpdate.Visible(True)
+Gui.SS_Form1.cmdUpdate.Size(855,375)
+Gui.SS_Form1.cmdUpdate.Zorder(0)
+Gui.SS_Form1.cmdUpdate.Position(100,4700)
+Gui.SS_Form1.cmdUpdate.Enabled(True)
+Gui.SS_Form1.cmdUpdate.FontName("Arial")
+Gui.SS_Form1.cmdUpdate.FontSize(8)
+Gui.SS_Form1.cmdUpdate.TabStop(True)
+Gui.SS_Form1.cmdUpdate.TabIndex(13)
+Gui.SS_Form1.cmdUpdate.Tooltip("")
+Gui.SS_Form1.cmdUpdate.ControlGroup(0)
+Gui.SS_Form1.cmdUpdate.DefaultValue("")
+
+Gui.SS_Form1.cmdUpdate.Event(click,cmdupdate_click)
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.Global.sJob.Declare(String)
+Variable.Global.sSuffix.Declare(String)
+Variable.Global.sSEQ.Declare(String)
+Variable.Global.sWC.Declare(String)
+Variable.Global.sWCName.Declare(String)
+Variable.Global.sEmp.Declare(String)
+Variable.Global.sEmpName.Declare(String)
+Variable.Global.sUserID.Declare(String)
+Variable.UDT.uEmail.Define("Email",String,EMAIL)
+Variable.UDT.uEmail.Define("Recipient",String,EMPLOYEE_NAME)
+Variable.uGlobal.uEmail.Declare("uEmail")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+
+'F.Intrinsic.Debug.InvokeDebugger
+'F.Intrinsic.Debug.Stop
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.Ccon,V.Ambient.Cuser,V.Ambient.Cpass)
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,15952)
+	V.Global.sWC.Set(V.Passed.000001)
+	V.Global.sWCName.Set(V.Passed.000002)
+	V.Global.sJob.Set(V.Passed.009990)
+	V.Global.sSuffix.Set(V.Passed.009991)
+	V.Global.sSEQ.Set(V.Passed.009992)
+	V.Global.sEmp.Set(V.Passed.009993)
+	V.Global.sEmpName.Set(V.Passed.009994)
+	F.Intrinsic.Control.CallSub(Email)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.CallSub(Refresh)
+	Gui.SS_Form1..Show
+F.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+program.sub.cmd_txtwc_click.start
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser(400,"",V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txtWC.Text(V.Local.sRet(0).Trim)
+	Gui.SS_Form1.txtWCName.Text(V.Local.sRet(1).Trim)
+F.Intrinsic.Control.EndIf
+
+program.sub.cmd_txtwc_click.end
+
+program.sub.cmd_txtemployee_click.start
+V.Local.sRet.Declare(String)
+V.Local.sEmployeeName.Declare(String)
+V.Local.sSQL.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+'F.Intrinsic.UI.Browser(50,"",V.Local.sRet)
+'GS User browser 10
+F.Intrinsic.UI.Browser(10,"",V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	'Find email for selected GS User
+	F.Intrinsic.String.Concat("Select * From USER_INFORMATION Where USER_ID = '",V.Local.sRet(0).Trim,"' and GS_USER = '",V.Local.sRet(1).Trim,"'",V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenRecordsetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+		Gui.SS_Form1.txtEmail.Text(V.ODBC.conx!rst.FieldValTrim!EMAIL)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rst.Close
+	V.Global.sUserID.Set(V.Local.sRet(0).Trim)
+	'GS USer
+	Gui.SS_Form1.txtEmployee.Text(V.Local.sRet(1).Trim)
+	'GS User first and last name
+	F.Intrinsic.String.Concat(V.Local.sRet(3).Trim," ",V.Local.sRet(4).Trim,V.Local.sEmployeeName)
+	Gui.SS_Form1.txtEmployeeName.Text(V.Local.sEmployeeName)
+F.Intrinsic.Control.EndIf
+
+program.sub.cmd_txtemployee_click.end
+
+Program.Sub.Unload.Start
+F.ODBC.Connection!con.Close
+F.Intrinsic.Control.End
+
+Program.Sub.Unload.End
+
+program.sub.cmdadd_click.start
+
+F.Intrinsic.Control.If(V.Screen.SS_Form1!txtWC.Text,=,"")
+	F.Intrinsic.UI.Msgbox("Please select a Workcenter.","WC Error")
+	Gui.SS_Form1.txtWC.SetFocus
+F.Intrinsic.Control.ElseIf(V.Screen.SS_Form1!txtEmployee.Text,=,"")
+	F.Intrinsic.UI.Msgbox("Please select a Employee.","Employee Error")
+	Gui.SS_Form1.txtEmployee.SetFocus
+F.Intrinsic.Control.ElseIf(V.Screen.SS_Form1!txtEmail.Text,=,"")
+	F.Intrinsic.UI.Msgbox("Please enter the employee email.","Email Error")
+	Gui.SS_Form1.txtEmail.SetFocus
+F.Intrinsic.Control.Else
+	F.ODBC.Connection!con.OpenRecordsetRW("rst","Select * From GCG_3308_WC_EMAIL")
+	F.ODBC.con!rst.AddNew
+	F.ODBC.con!rst.Set!MACHINE(V.Screen.SS_Form1!txtWC.Text)
+	F.ODBC.con!rst.Set!WC_NAME(V.Screen.SS_Form1!txtWCName.Text)
+	F.ODBC.con!rst.Set!EMPLOYEE(V.Screen.SS_Form1!txtEmployee.Text)
+	F.ODBC.con!rst.Set!EMPLOYEE_NAME(V.Screen.SS_Form1!txtEmployeeName.Text)
+	F.ODBC.con!rst.Set!EMAIL(V.Screen.SS_Form1!txtEmail.Text)
+	F.ODBC.con!rst.Set!ACTIVE(V.Screen.SS_Form1!chkActive.Value)
+	F.ODBC.con!rst.Set!USER_ID(V.Global.sUserID.Trim)
+	F.ODBC.con!rst.Update
+	F.ODBC.con!rst.Close
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.CallSub(Refresh)
+
+program.sub.cmdadd_click.end
+
+Program.Sub.Buildflex.Start
+V.Local.iC.Declare(Long)
+
+Gui.SS_Form1.gsflexgrid1.Rows(2)
+Gui.SS_Form1.gsflexgrid1.Cols(8)
+Gui.SS_Form1.gsflexgrid1.TextMatrix(0,0,"ID")
+Gui.SS_Form1.gsflexgrid1.ColWidth(0,0)
+Gui.SS_Form1.gsflexgrid1.TextMatrix(1,0,"WC")
+Gui.SS_Form1.gsflexgrid1.ColWidth(1,1000)
+Gui.SS_Form1.gsflexgrid1.TextMatrix(2,0,"WC Name")
+Gui.SS_Form1.gsflexgrid1.ColWidth(2,2000)
+Gui.SS_Form1.gsflexgrid1.TextMatrix(3,0,"Employee")
+Gui.SS_Form1.gsflexgrid1.ColWidth(3,0)
+Gui.SS_Form1.gsflexgrid1.TextMatrix(4,0,"Employee Name")
+Gui.SS_Form1.gsflexgrid1.ColWidth(4,3400)
+Gui.SS_Form1.gsflexgrid1.TextMatrix(5,0,"Email Address")
+Gui.SS_Form1.gsflexgrid1.ColWidth(5,3500)
+Gui.SS_Form1.gsflexgrid1.TextMatrix(6,0,"Active")
+Gui.SS_Form1.gsflexgrid1.ColWidth(6,600)
+Gui.SS_Form1.gsflexgrid1.TextMatrix(7,0,"")
+Gui.SS_Form1.gsflexgrid1.ColWidth(7,800)
+Gui.SS_Form1.gsflexgrid1.FixedRows(1)
+
+F.Intrinsic.Control.For(V.Local.iC,7,7,1)
+	Gui.SS_Form1.gsflexgrid1.BuildStyle(1,V.Local.iC,"Type","Command","Delete")
+	Gui.SS_Form1.gsflexgrid1.BuildStyle(1,V.Local.iC,"Format","Alignment","4")
+	Gui.SS_Form1.gsflexgrid1.BuildStyle(1,V.Local.iC,"Type","Locked",True)
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.For(V.Local.iC,6,6,1)
+	Gui.SS_Form1.gsflexgrid1.BuildStyle(2,V.Local.iC,"Type","Checkbox",True)
+F.Intrinsic.Control.Next(V.Local.iC)
+
+
+Program.Sub.Buildflex.End
+
+Program.Sub.Refresh.Start
+V.Local.sSQL.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.iRow.Declare(Long)
+V.Local.iR.Declare(Long)
+V.Local.i.Declare(Long)
+Gui.SS_Form1.gsflexgrid1.Visible(False)
+Gui.SS_Form1.gsflexgrid1.Rows(1)
+F.Intrinsic.Control.CallSub(Buildflex)
+V.Local.iR.Set(1)
+
+
+
+F.ODBC.Connection!con.OpenRecordsetRO("rst","Select * From GCG_3308_WC_EMAIL")
+F.Intrinsic.Control.DoUntil(V.ODBC.con!rst.EOF,=,True)
+	F.Intrinsic.Math.Add(V.Local.iR,1,V.Local.iR)
+	F.Intrinsic.Math.Sub(V.Local.iR,1,V.Local.iRow)
+	Gui.SS_Form1.gsflexgrid1.Rows(V.Local.iR)
+	Gui.SS_Form1.gsflexgrid1.TextMatrix(0,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!ID)
+	Gui.SS_Form1.gsflexgrid1.TextMatrix(1,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!MACHINE)
+	Gui.SS_Form1.gsflexgrid1.TextMatrix(2,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!WC_NAME)
+	Gui.SS_Form1.gsflexgrid1.TextMatrix(3,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!EMPLOYEE)
+	Gui.SS_Form1.gsflexgrid1.TextMatrix(4,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!EMPLOYEE_NAME)
+	Gui.SS_Form1.gsflexgrid1.TextMatrix(5,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!EMAIL)
+	Gui.SS_Form1.gsflexgrid1.TextMatrix(6,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!ACTIVE)
+	Gui.SS_Form1.gsflexgrid1.ApplyStyle(V.Local.iRow,1)
+	Gui.SS_Form1.gsflexgrid1.ApplyStyle(V.Local.iRow,2)
+	F.ODBC.con!rst.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.con!rst.Close
+F.Intrinsic.Control.CallSub(Clear)
+Gui.SS_Form1.gsflexgrid1.Visible(True)
+
+
+Program.Sub.Refresh.End
+
+program.sub.cmdupdate_click.start
+V.Local.sSQL.Declare(String)
+V.Local.iCol.Declare(Long)
+V.Local.iRows.Declare(Long)
+V.Local.sRow.Declare(String)
+V.Local.sRowArray.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.iRow.Declare(Long)
+V.Local.iNum.Declare(Long)
+V.Local.sCustomer.Declare(String)
+
+Gui.SS_Form1.gsflexgrid1.Commit
+Gui.SS_Form1.gsflexgrid1.Visible(False)
+F.Intrinsic.Math.Sub(V.Screen.SS_Form1!gsflexgrid1.Rows,1,V.Local.iRow)
+F.Intrinsic.Control.For(V.Local.i,1,V.Local.iRow,1)
+	'F.Intrinsic.UI.ChangeWaitStatus("Saving...",V.Local.i,1,V.Local.iRow.UBound)
+	Gui.SS_Form1.gsflexgrid1.ReadRow(V.Local.i,V.Local.sRow)
+	F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRowArray)
+		F.Intrinsic.String.Concat("Select * From GCG_3308_WC_EMAIL where ID = '",V.Local.sRowArray(0),"'",V.Local.sSQL)
+		F.ODBC.Connection!con.OpenRecordsetRW("rst",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,False)
+			F.ODBC.con!rst.Set!MACHINE(V.Local.sRowArray(1))
+			F.ODBC.con!rst.Set!WC_NAME(V.Local.sRowArray(2))
+			F.ODBC.con!rst.Set!EMPLOYEE(V.Local.sRowArray(3))
+			F.ODBC.con!rst.Set!EMPLOYEE_NAME(V.Local.sRowArray(4))
+			F.ODBC.con!rst.Set!EMAIL(V.Local.sRowArray(5))
+			F.ODBC.con!rst.Set!ACTIVE(V.Local.sRowArray(6))
+			F.ODBC.con!rst.Update
+		F.Intrinsic.Control.EndIf
+		F.ODBC.con!rst.Close
+F.Intrinsic.Control.Next(V.Local.i)
+F.Intrinsic.Control.CallSub(Refresh)
+Gui.SS_Form1.gsflexgrid1.Visible(True)
+
+
+program.sub.cmdupdate_click.end
+
+program.sub.gsflexgrid1_commandclick.start
+V.Local.sRet.Declare(String)
+V.Local.sSQL.Declare(String)
+
+Gui.SS_Form1.gsflexgrid1.GetTextMatrix(0,V.Args.Key,V.Local.sRet)
+F.Intrinsic.String.Concat("Select * From GCG_3308_WC_EMAIL where ID = '",V.Local.sRet,"'",V.Local.sSQL)
+F.ODBC.Connection!con.OpenRecordsetRW("rst",V.Local.sSQL)
+F.ODBC.con!rst.Delete
+F.ODBC.con!rst.Close
+F.Intrinsic.Control.CallSub(Refresh)
+
+program.sub.gsflexgrid1_commandclick.end
+
+Program.Sub.Clear.Start
+Gui.SS_Form1.txtWC.Text("")
+Gui.SS_Form1.txtWCName.Text("")
+Gui.SS_Form1.txtEmployee.Text("")
+Gui.SS_Form1.txtEmployeeName.Text("")
+Gui.SS_Form1.txtEmail.Text("")
+Gui.SS_Form1.chkActive.Value(0)
+
+Program.Sub.Clear.End
+
+Program.Sub.email.Start
+V.Local.sText.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sSubject.Declare(String)
+V.Local.sBody.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.sSenderEmail.Declare(String)
+V.Local.sSenderName.Declare(String)
+'F.Intrinsic.Debug.InvokeDebugger
+'F.Intrinsic.Debug.Stop
+F.Intrinsic.String.Concat(V.Caller.FilesDir,"\Body.txt",V.Local.sFile)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.UI.Msgbox("Email template is not found.","Email Error")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.File.File2String(V.Local.sFile,V.Local.sText)
+F.Intrinsic.String.Replace(V.Local.sText,"%EMP%",V.Global.sEmp,V.Local.sText)
+F.Intrinsic.String.Replace(V.Local.sText,"%EMPNAME%",V.Global.sEmpName,V.Local.sText)
+F.Intrinsic.String.Replace(V.Local.sText,"%WC%",V.Global.sWC,V.Local.sText)
+F.Intrinsic.String.Replace(V.Local.sText,"%WCNAME%",V.Global.sWCName,V.Local.sText)
+F.Intrinsic.String.Replace(V.Local.sText,"%DATETIME%",V.Ambient.Now,V.Local.sText)
+F.Intrinsic.String.Replace(V.Local.sText,"%JOB%",V.Global.sJob,V.Local.sText)
+F.Intrinsic.String.Replace(V.Local.sText,"%SUFFIX%",V.Global.sSuffix,V.Local.sText)
+F.Intrinsic.String.Replace(V.Local.sText,"%SEQ%",V.Global.sSEQ,V.Local.sText)
+F.Intrinsic.String.Split(V.Local.sText,"*!*",V.Local.sText)
+
+V.Local.sSubject.Set(V.Local.sText(0))
+'F.Intrinsic.Control.If(V.Local.sText.UBound,>,0)
+V.Local.sBody.Set(V.Local.sText(1))
+'F.Intrinsic.Control.EndIf
+
+F.Global.Security.GetUserEmail(V.Caller.User,V.Local.sSenderEmail)
+'F.Global.Security.GetFullName(V.Caller.User,V.Local.sSenderName)
+
+
+F.Intrinsic.String.Concat("Select * From GCG_3308_WC_EMAIL Where ACTIVE = '1' and MACHINE = '",V.Global.sWC.Trim,"'",V.Local.sSQL)
+F.ODBC.Connection!con.OpenRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,False)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("con","rst","V.uGlobal.uEmail",False)
+F.Intrinsic.Control.EndIf
+F.ODBC.con!rst.Close
+
+F.Intrinsic.Control.For(V.Local.i,V.uGlobal.uEmail.LBound,V.uGlobal.uEmail.UBound,1)
+	F.Global.Messaging.CreateEMMessage(V.uGlobal.uEmail(v.Local.i)!Email,V.uGlobal.uEmail(v.Local.i)!Recipient,V.Local.sSenderEmail,V.Global.sEmpName,V.Local.sSubject,V.Local.sBody,,False)
+	F.Intrinsic.UI.Sleep(1)
+F.Intrinsic.Control.Next(V.Local.i)
+F.Intrinsic.UI.Msgbox("Message sent successfully")
+'End script
+F.Intrinsic.Control.CallSub(Unload)
+
+Program.Sub.email.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_WC_EMAIL$}$ERIC$}$5/1/2012$}$False
+${$3$}$0$}$$}$-1$}$-1$}$$}$1/1/1900$}$'ERM
+'Quote 3610
+'hook: pre process-start job 15951
+'hook: post process-start job 15952
+Program.Sub.Comments.End
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::Email Notification Maintenance
+SS_Form1.CTRL{{NAME::txtWC\\TYPE::2\\CAPTION::Workcenter\\GROUP::1\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::txtEmployee\\TYPE::2\\CAPTION::Employee\\GROUP::1\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::txtEmail\\TYPE::2\\CAPTION::Email\\GROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::chkActive\\TYPE::9\\CAPTION::Active\\GROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdAdd\\TYPE::5\\CAPTION::Add\\GROUP::1\\BROWSER::0\\SIZE::1
+
+Program.Sub.ScreenSS.End
